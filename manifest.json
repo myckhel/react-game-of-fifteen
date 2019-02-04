@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Game of Fifteen",
+  "name": "Myckhels Game of Fifteen",
   "icons": [
     {
       "src": "favicon.ico",
