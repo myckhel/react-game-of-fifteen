@@ -7,7 +7,7 @@
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
   },
-  "homepage" : "https://myckhel.github.io/react-game-of-fifteen/",
+  "homepage": "https://myckhel.github.io/react-game-of-fifteen/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -24,5 +24,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
