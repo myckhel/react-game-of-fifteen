@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import Howl from '../assets/js/howler.core.min';
 
 class Board extends Component {
   constructor(props){
@@ -13,6 +14,8 @@ class Board extends Component {
   DIM_MAX = 9; DIM_MIN = 3;
   // properties
   tile_r; tile_c; blank_r; blank_c;
+// sound
+// sndClick = new Howl({ src: ['snd/click.mp3'] });
 
   componentWillMount = () => {
     if (this.state.level < this.DIM_MIN || this.d > this.DIM_MAX) {
@@ -141,6 +144,7 @@ class Board extends Component {
   }
 
   swap = () => {
+    // this.sndClick.play();
     let temp = this.state.board[this.tile_r][this.tile_c]
     this.setState( state => {
       state.board[this.tile_r][this.tile_c] = state.board[this.blank_r][this.blank_c]
@@ -162,17 +166,17 @@ class Board extends Component {
     <div
       value={props.num}
       onClick={this.handleClick}
-      className={`tile col btn btn-${props.num === 0 ? 'danger' : 'info'}`}
-    >{props.num}</div>
+      className={`tile border border-dark col btn btn-${props.num === 0 ? 'dark' : 'warning'}`}
+    >{props.num === 0 ? "__" : props.num}</div>
   )
 
   Menu = () => (
     <div className="row align-item-center">
       <div className="col-xs-4 pull-left">
-        <button className="btn" onClick={this.init} ><h3> Restart Level <i className="restart"></i> </h3></button>
+        <button className="btn border border-dark" onClick={this.init} ><h3> Restart Level <i className="restart"></i> </h3></button>
       </div>
       <div className="col-xs-4 pull-right">
-        <button className="btn" onClick={this.props.clicks.handleReset} ><h3> Restart Game <i className="reset"></i> </h3></button>
+        <button className="btn border border-dark" onClick={this.props.clicks.handleReset} ><h3> Restart Game <i className="reset"></i> </h3></button>
       </div>
     </div>
   )
