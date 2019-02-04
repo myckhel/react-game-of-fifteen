@@ -8,10 +8,6 @@
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
   },
-<<<<<<< HEAD
-  "homepage": "https://myckhel.github.io/react-game-of-fifteen/",
-=======
->>>>>>> 203b231344fe4988ad03b47cdda0e10645df2da8
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
