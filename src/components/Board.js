@@ -23,7 +23,12 @@ class Board extends Component {
       return false
     }
     this.init()
+    document.addEventListener("keydown", this.handleKeyPress, false);
   }
+
+  componentWillUnmount = () => {
+      document.removeEventListener("keydown", this.handleKeyPress, false);
+   }
 
   init = () => {
     this.setState({board: this.draw(), choose: false})
@@ -159,6 +164,13 @@ class Board extends Component {
       this.setState({
         won: true
       })
+    }
+  }
+
+  handleKeyPress = (event) => {
+    console.log('emmit');
+    if(event.key === 'Enter'){
+      console.log('enter press here! ')
     }
   }
 
